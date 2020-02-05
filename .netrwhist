@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/dminkley/temp2'
+let g:netrw_dirhist_2='/scratch/dminkley/omyk_paper_results/step11_structural_variant_filtering/step01_ref_ind_based_filtering'
+let g:netrw_dirhist_3='/NAS_DS/backups/dminkley/from_woodstock_scratch/otsh/creating_high-quality_snp_set'
+let g:netrw_dirhist_4='/NAS_DS/backups/dminkley/from_woodstock_scratch/omyk_paired_read_snp_disco/step02_run_genotypeGVCF'
