@@ -4,6 +4,32 @@
 " https://www.youtube.com/watch?v=XA2WjJbmmoM&t=408s
 " Last edited by dminkley on Feb 4 2020
 
+" This will download vim-plug lightweight plugin manager if it is not found in
+" the ~/.vim/autoload directory
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" Load plugins
+call plug#begin()
+" All Plugins go between the two call commands
+Plug 'SirVer/ultisnips'
+Plug 'dminkley/vim-snippets'
+Plug 'honza/vim-snippets'
+call plug#end()
+
+" Configuring the ultisnips plugin
+" Trigger configuration.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+
+
 colorscheme codedark
 syntax enable	" enable syntax processing
 set tabstop=4	" number ov visual spaces per TAB
